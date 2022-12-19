@@ -1,24 +1,29 @@
+/*
+ * File: 7-puts_half.c
+ * Auth: Brennan D Baraban
+ */
+
 #include "holberton.h"
 
 /**
- * puts_half - half of a string.
- * @str: string to be printed.
+ * puts_half - Prints half of a string.
+ * @str: The string to be printed.
  */
 void puts_half(char *str)
 {
-	int i = 0, len = 0, j;
+	int index = 0, len = 0, n;
 
-	while (str[i++])
+	while (str[index++])
 		len++;
 
 	if ((len % 2) == 0)
-		j = len / 2;
+		n = len / 2;
 
 	else
-		j = (len + 1) / 2;
+		n = (len + 1) / 2;
 
-	for (i = j; i < len; i++)
-		_putchar(str[i]);
+	for (index = n; index < len; index++)
+		_putchar(str[index]);
 
 	_putchar('\n');
 }
