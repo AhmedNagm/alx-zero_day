@@ -1,4 +1,5 @@
 #include "../holberton.h"
+#include <stdio.h>
 
 /**
  * main - check the code for Holberton School students.
@@ -7,13 +8,23 @@
  */
 int main(void)
 {
-	int array[5];
 
-	array[0] = 98;
-	array[1] = 402;
-	array[2] = -198;
-	array[3] = 298;
-	array[4] = -1024;
-	print_array(array, 5);
+	char s[] = "ROT13 (\"rotate by 13 places\", sometimes hyphenated ROT-13) is a simple letter substitution cipher.\n";
+	char *p;
+
+	p = rot13(s);
+	printf("%s", p);
+	printf("------------------------------------\n");
+	printf("%s", s);
+	printf("------------------------------------\n");
+	p = rot13(s);
+	printf("%s", p);
+	printf("------------------------------------\n");
+	printf("%s", s);
+	printf("------------------------------------\n");
+	p = rot13(s);
+	printf("%s", p);
+	printf("------------------------------------\n");
+	printf("%s", s);
 	return (0);
 }
